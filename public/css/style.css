@@ -1,0 +1,366 @@
+@font-face {
+  font-family: vazirfont;
+  src: url(IRANSans.woff);
+}
+
+body , p , h1 , h2 , h3 , h4 , h5 , h6 , span , a ,#root {
+  font-family: vazirfont !important;
+} 
+
+
+
+#root {
+  width: 100%;
+} 
+
+body {
+  background: #fff;
+}
+
+
+
+/* Style For Login */
+
+
+.login-wave-head {
+  position: relative;
+  height: 500px;
+  background: #002f62;
+  background-image: linear-gradient(155deg,  #7799bb 0%, #5580aa 50%, #446688 100%);
+}
+
+
+.login-form-wave-svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.login-wave section {
+  margin: 5% 10%;
+}
+
+.login-form {
+  margin-left: 40%;
+  height:200px;
+  margin-top:100px;
+  z-index: 1000;
+  position: absolute;
+  width:300px;
+  min-height:350px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  padding: 10px 20px 0 20px;
+  background: #ffffff30;
+}
+
+.login-form-logo {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-form-logo img {
+  width:70px;
+  height:70px;
+  margin-top: 20px;
+}
+
+#basic {
+  margin-top: 40px;
+}
+
+.ant-layout-content p , .ant-layout-content h3 , .ant-layout-content h1 , .ant-layout-content h2  {
+  color:#8a8a8a !important;;
+}
+
+/* Style For Panel */
+
+.panel-logo {
+  min-height:40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.panel-logo img {
+  width:50px;
+  height:50px;
+}
+
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub,.ant-layout-sider-children , .ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #446688 !important;
+}
+
+.ant-layout-sider-trigger , .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: #7799bb !important;
+}
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.title-list-name {
+  cursor: pointer;
+  color:#1890ff;
+}
+
+.list-image-banner {
+  text-align: center;
+}
+
+.list-image-banner img , .ant-descriptions img {
+  cursor: pointer;
+}
+
+.list-image-banner .ant-btn-primary {
+  margin-top:10px;
+}
+
+.ant-alert-warning{
+  margin-bottom: 20px !important;
+}
+
+.detail-modal .leaflet-container {
+  height:200px;
+}
+
+/* Style For Card */
+
+.ant-card {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  margin-bottom: 10px !important;
+  margin-right:15px !important;
+  width:240px;
+}
+
+.ant-card p {
+  font-size: 12px;
+}
+
+.card-aparteman .ant-tag , .card-serviceman .ant-tag , .contract-table .ant-tag , .edit-modal .ant-tag{
+  cursor: pointer;
+}
+
+
+.card-footer  {
+  margin-top: 20px;
+}
+
+.card-footer-btn-1 {
+  height:30px !important;
+  padding: 3px !important;
+  font-size:11px !important;
+  margin-bottom: 5px;
+  background: #0ca879 !important;
+  color:#fff;
+  border:none;
+  float: right;
+  width: 90%;
+  border:none !important;
+
+}
+
+
+.card-footer-btn-2 {
+  height:30px !important;
+  padding: 3px!important;
+  font-size:11px !important;
+  margin-bottom: 5px;
+  color:#fff;
+  float: left;
+  width: 90%;
+  border:none !important;
+
+}
+
+.card-footer-btn-3 {
+  float: right;
+  width: 90%;
+  background: #dd8246 !important;
+  height:30px !important;
+  padding: 3px!important;
+  font-size:11px !important;
+  border:none !important;
+}
+
+
+.ant-card img {
+  width:35px;
+  height:35px;
+  border-radius: 100%;
+  border:1px solid #e0e0e0;
+}
+
+
+/* Style For Form */
+#add_serviceman .ant-form-item-label{
+  text-align: right !important;
+}
+
+#add_serviceman .ant-input-number {
+  width:100%;
+}
+
+.form-map {
+  height:200px;
+  margin-bottom: 20px;
+}
+
+
+/* Style For Map */
+
+.map-page {
+  height:500px;
+}
+
+.leaflet-container {
+  width: 100%;
+  height:100%;
+}
+
+/* Style For Modal */
+
+
+.show-message{
+  min-height: 100px;
+  border:1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.show-message-item {
+  font-size: 12px;
+  color:#fff;
+  margin-bottom: 5px;
+}
+
+
+.show-message-item-init1 {
+  font-size: 12px;
+  color:#fff;
+  border-radius: 20px;
+  background: #0ca879;
+  padding: 3px 15px 3px 15px;
+  float: right;
+}
+
+.show-message-item-init2 {
+  font-size: 12px;
+  color:#fff;
+  border-radius: 20px;
+  background: #1890ff;
+  padding: 3px 15px 3px 15px;
+  float: left;
+}
+
+.send-message {
+  height:200px;
+  padding: 10px;
+}
+
+#add_message .ant-form-item-label {
+  text-align: right !important;
+}
+
+#add_message .ant-btn-rtl {
+  background: #1890ff;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+}
+
+.title-table-link {
+  color:#1890ff;
+  cursor: pointer;
+}
+
+
+/* Style For Loader */
+
+.main-loader {
+  top: 0;
+  bottom: 0;
+  right:0;
+  left: 0;
+  z-index: 99999;
+  background:#ffffffc5;
+  width: 100%;
+  position: fixed;
+}
+
+
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 100px;
+  height: 100px;
+  background-image: url('./preloader.svg');
+  background-position: center center;
+}
+
+
+
+
+/* Style For notification-head-section */
+
+.notification-head-section {
+  height: 62px;
+  float: left;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.head-example{
+  width: 42px;
+  height: 42px;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 9px;
+  font-size: 22px;
+}
+
+.notification-head-section sup {
+  left:34px !important;
+  top:8px;
+}
+
+
+
+/* Style For @Media */
+
+@media only screen and (max-width: 740px) {
+  .login-form {
+    margin-left:30%;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .login-form {
+    margin-left:23%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .login-form {
+    margin-left:70px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .login-form {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
