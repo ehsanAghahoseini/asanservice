@@ -269,8 +269,7 @@ class ApartemanList extends React.Component {
         </Card>
         )}
         <Modal className="detail-modal" width={1000} title="جزئیات" visible={this.state.visible} onCancel={this.handleOk} footer={null} >
-          <Descriptions bordered
-            column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
+          <Descriptions bordered>
             <Descriptions.Item label="نام آپارتمان" span={1}>{this.state.detail_data.apartment_name}</Descriptions.Item>
             <Descriptions.Item label="نام کاربری" span={1}>{this.state.detail_data.username}</Descriptions.Item>
             <Descriptions.Item label="نام " span={1}>{this.state.detail_data.firstname}</Descriptions.Item>

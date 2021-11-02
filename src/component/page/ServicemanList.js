@@ -303,15 +303,14 @@ componentDidMount() {
           </div>
         </Modal>
         <Modal  width={1000} title="جزئیات" visible={this.state.visible_detail} onCancel={this.handleOk} footer={null} >
-          <Descriptions bordered
-            column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
+          <Descriptions bordered>
             <Descriptions.Item label="نام کاربری" span={1}>{this.state.detail_data.username}</Descriptions.Item>
             <Descriptions.Item label="نام " span={1}>{this.state.detail_data.name}</Descriptions.Item>
             <Descriptions.Item label=" نام خانوادگی" span={1}>{this.state.detail_data.family}</Descriptions.Item>
             <Descriptions.Item label="وضعیت فعال بودن" span={1}>{this.state.detail_data.is_active == true ? <span>فعال </span> : <span> غیرفعال</span>}</Descriptions.Item>
             <Descriptions.Item label="وضعیت دسترسی" span={1}>{this.state.detail_data.is_available == true ? <span>دردسترس </span> : <span> غیردسترس</span>}</Descriptions.Item>
             <Descriptions.Item label="سطح " span={1}>{this.state.detail_data.level}</Descriptions.Item>
-            <Descriptions.Item label="امتیاز ادمین " span={1}>{this.state.detail_data.rate_admin}</Descriptions.Item>
+            {/* <Descriptions.Item label="امتیاز ادمین " span={1}>{this.state.detail_data.rate_admin}</Descriptions.Item> */}
             <Descriptions.Item label="امتیاز کاربر " span={1}>{this.state.detail_data.rate_users}</Descriptions.Item>
             <Descriptions.Item label="نام " span={1}>{this.state.detail_data.name}</Descriptions.Item>
             <Descriptions.Item label="تاریخ" span={1}>{moment(this.state.detail_data.created_at).locale('fa').format("YYYY/M/D")}</Descriptions.Item>
@@ -325,8 +324,7 @@ componentDidMount() {
                 <Collapse >
                   {this.state.bills_list.map(item =>
                   <Panel header={<> صورت حساب {moment(item.created_at).locale('fa').format("YYYY/M/D")}</>} key={item.id+5}>
-                    <Descriptions bordered
-                      column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
+                    <Descriptions bordered>
                       <Descriptions.Item label="علت پرداختی" span={1}>{[item.type == 0 && <span>پرداخت سرویس</span> ,item.type == 1 && <span> پاداش</span>,item.type == 2 && <span>کارمزد</span>,item.type == 3 && <span> تسویه حساب</span> ]  }</Descriptions.Item>
                       <Descriptions.Item label="عنوان " span={1}>{item.title}</Descriptions.Item>
                       <Descriptions.Item label="مبلغ (تومان) " span={1}>{item.amount}</Descriptions.Item>

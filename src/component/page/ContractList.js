@@ -323,21 +323,19 @@ class ContractList extends React.Component {
           </Form>      
         </Modal>
         <Modal width={1000} className="edit-modal" title="جزئیات" visible={this.state.visible_detail} onCancel={this.handleOk} footer={null} >
-          <Descriptions bordered
-            column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
+          <Descriptions bordered>
             <Descriptions.Item label="نام تکنسین" span={1}>{this.state.detail_data_tech.name} {this.state.detail_data_tech.family}</Descriptions.Item>
             <Descriptions.Item label="کاربری تکنسین" span={1}>{this.state.detail_data_tech.username} </Descriptions.Item>
           </Descriptions>
           <Collapse >
             {this.state.detail_data_list_service.map(item =>          
               <Panel header=" سرویس " key={item.id}>
-                <Descriptions bordered
-                  column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
-                  {item.time_send != null ? <Descriptions.Item label=" time_send " span={1}>{moment(item.time_send).locale('fa').format("YYYY/M/D")}</Descriptions.Item> :null}
-                  {item.time_arrive != null ? <Descriptions.Item label=" time_arrive " span={1}>{moment(item.time_arrive).locale('fa').format("YYYY/M/D")} <Tag color="blue" onClick={()=>this.EditTimeArrive(item.id)}>ویرایش</Tag> </Descriptions.Item> :null}
-                  {item.time_end != null ? <Descriptions.Item label=" time_end " span={1}>{moment(item.time_end).locale('fa').format("YYYY/M/D")}</Descriptions.Item> :null}
-                  {item.general.temp_time_technician != null ? <Descriptions.Item label=" تایم پیشنهاد تکنسین " span={1}>{moment(item.general.temp_time_technician).locale('fa').format("YYYY/M/D")}</Descriptions.Item> :null}
-                  {item.general.temp_time_user != null ? <Descriptions.Item label=" تایم پیشنهاد کاربر " span={1}>{moment(item.general.temp_time_user).locale('fa').format("YYYY/M/D")}</Descriptions.Item> :null}
+                <Descriptions bordered>
+                  {item.time_send != null ? <Descriptions.Item label=" زمان شروع " span={1}>{moment(item.time_send).locale('fa').format("YYYY/M/D")}</Descriptions.Item> :null}
+                  {item.time_arrive != null ? <Descriptions.Item label=" زمان رسیدن به محل " span={1}>{moment(item.time_arrive).locale('fa').format("YYYY/M/D")} <Tag color="blue" onClick={()=>this.EditTimeArrive(item.id)}>ویرایش</Tag> </Descriptions.Item> :null}
+                  {item.time_end != null ? <Descriptions.Item label=" زمان پایان " span={1}>{moment(item.time_end).locale('fa').format("YYYY/M/D")}</Descriptions.Item> :null}
+                  {item.general.temp_time_technician != null ? <Descriptions.Item label=" تایم پیشنهاد تکنسین " span={1}>{item.general.temp_time_technician}</Descriptions.Item> :null}
+                  {item.general.temp_time_user != null ? <Descriptions.Item label=" تایم پیشنهاد کاربر " span={1}>{item.general.temp_time_user}</Descriptions.Item> :null}
                   <Descriptions.Item label="وضعیت سرویس" span={1}>{[item.general.accept_status == 0 && <span>تایید ادمین</span> ,item.general.accept_status == 1 && <span> تکنسین در خواست تغییر زمان داد</span>,item.general.accept_status == 2 && <span>کاربر درخواست تغییر زمان داده</span>,item.type == 3 && <span>کاربر و تکنسین درخواست تغییر زمان داده</span> ]  }</Descriptions.Item> 
                 </Descriptions>
               </Panel>
