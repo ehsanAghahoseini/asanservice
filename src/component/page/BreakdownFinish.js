@@ -205,15 +205,15 @@ class Breakdown extends React.Component {
         <Table dataSource={this.state.listdata} columns={columns} />
         <Modal className="detail-modal" width={1000} title="جزئیات" visible={this.state.visible_detail} onCancel={this.handleOk} footer={null} >
           <Descriptions bordered>
-            <Descriptions.Item label="نام کاربری" span={2}>{this.state.detail_user.username}</Descriptions.Item>
+            <Descriptions.Item label="نام کاربری" span={1}>{this.state.detail_user.username}</Descriptions.Item>
             <Descriptions.Item label="نام آپارتمان" span={1}>{this.state.detail_user.apartment_name}</Descriptions.Item>
-            <Descriptions.Item label="نام مدیریت" span={2}>{this.state.detail_user.firstname} {this.state.detail_user.lastname}</Descriptions.Item>
-            <Descriptions.Item label="وضعیت پرداخت" span={1}>{this.state.detail_data.is_paid == true ? <span>پرداخت شده</span> : <span>پرداخت نشده</span>}</Descriptions.Item>
-            {/* <Descriptions.Item label="امتیاز" span={1}>{this.state.detail_user.rate != null && this.state.detail_user.rate}</Descriptions.Item> */}
-            {this.state.detail_user.q1 != null && <Descriptions.Item label="عملکرد صحیح در تشخیص خرابی" span={2}>{this.state.detail_user.q4 ? "بله" : "خیر"}</Descriptions.Item> }
-            {this.state.detail_user.q2 != null && <Descriptions.Item label="رفع ایراد و سرویس دهی در زمان مناسب" span={2}>{this.state.detail_user.q4 ? "بله" : "خیر"}</Descriptions.Item> }
-            {this.state.detail_user.q3 != null && <Descriptions.Item label="نوع پاسخگویی و تعامل و رعایت اخلاق حرفه ای" span={2}>{this.state.detail_user.q4 ? "بله" : "خیر"}</Descriptions.Item> }
-            {this.state.detail_user.q4 != null && <Descriptions.Item label="رعایت نکات ایمنی و در اختیار داشتن تجهیزات کامل" span={2}>{this.state.detail_user.q4 ? "بله" : "خیر"}</Descriptions.Item> }
+            <Descriptions.Item label="نام مدیریت" span={1}>{this.state.detail_user.firstname} {this.state.detail_user.lastname}</Descriptions.Item>
+            <Descriptions.Item label="وضعیت پرداخت" span={2}>{this.state.detail_data.is_paid == true ? <span>پرداخت شده</span> : <span>پرداخت نشده</span>}</Descriptions.Item>
+            <Descriptions.Item label="امتیاز" span={1}>{this.state.detail_data.rate != null && this.state.detail_data.rate}</Descriptions.Item>
+            {this.state.detail_data.q1 != null && <Descriptions.Item label="عملکرد صحیح در تشخیص خرابی" span={1}>{this.state.detail_data.q1 ? <span>بله</span> :<span>خیر</span> }</Descriptions.Item> }
+            {this.state.detail_data.q2 != null && <Descriptions.Item label="رفع ایراد و سرویس دهی در زمان مناسب" span={2}>{this.state.detail_data.q2 ? <span>بله</span> :<span>خیر</span>}</Descriptions.Item> }
+            {this.state.detail_data.q3 != null && <Descriptions.Item label="نوع پاسخگویی و تعامل و رعایت اخلاق حرفه ای" span={1}>{this.state.detail_data.q3 ? <span>بله</span> :<span>خیر</span>}</Descriptions.Item> }
+            {this.state.detail_data.q4 != null && <Descriptions.Item label="رعایت نکات ایمنی و در اختیار داشتن تجهیزات کامل" span={2}>{this.state.detail_data.q4 ? <span>بله</span> :<span>خیر</span>}</Descriptions.Item> }
 
             <Descriptions.Item label="زمان پذیرش" span={1}>{this.state.detail_data.time_accept != null ? moment(this.state.detail_data.time_accept).locale('fa').format("YYYY/M/D"): <span>تنظیم نشده</span>}</Descriptions.Item>
             <Descriptions.Item label="زمان رسیدن به محل" span={1}>{this.state.detail_data.time_accept != null ? moment(this.state.detail_data.time_arrive).locale('fa').format("YYYY/M/D"): <span>تنظیم نشده</span>}</Descriptions.Item>
