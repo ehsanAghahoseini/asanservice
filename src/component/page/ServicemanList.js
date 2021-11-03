@@ -311,7 +311,7 @@ componentDidMount() {
             <Descriptions.Item label="وضعیت دسترسی" span={1}>{this.state.detail_data.is_available == true ? <span>دردسترس </span> : <span> غیردسترس</span>}</Descriptions.Item>
             <Descriptions.Item label="سطح " span={1}>{this.state.detail_data.level}</Descriptions.Item>
             {/* <Descriptions.Item label="امتیاز ادمین " span={1}>{this.state.detail_data.rate_admin}</Descriptions.Item> */}
-            <Descriptions.Item label="امتیاز کاربر " span={1}>{this.state.detail_data.rate_users}</Descriptions.Item>
+            {/* <Descriptions.Item label="امتیاز کاربر " span={1}>{this.state.detail_data.rate_users}</Descriptions.Item> */}
             <Descriptions.Item label="نام " span={1}>{this.state.detail_data.name}</Descriptions.Item>
             <Descriptions.Item label="تاریخ" span={1}>{moment(this.state.detail_data.created_at).locale('fa').format("YYYY/M/D")}</Descriptions.Item>
             <Descriptions.Item label="موجودی بازاریابی " span={1}>{this.state.detail_data.amount_marketing}</Descriptions.Item>

@@ -215,10 +215,10 @@ class Breakdown extends React.Component {
             {this.state.detail_data.q3 != null && <Descriptions.Item label="نوع پاسخگویی و تعامل و رعایت اخلاق حرفه ای" span={1}>{this.state.detail_data.q3 ? <span>بله</span> :<span>خیر</span>}</Descriptions.Item> }
             {this.state.detail_data.q4 != null && <Descriptions.Item label="رعایت نکات ایمنی و در اختیار داشتن تجهیزات کامل" span={2}>{this.state.detail_data.q4 ? <span>بله</span> :<span>خیر</span>}</Descriptions.Item> }
 
-            <Descriptions.Item label="زمان پذیرش" span={1}>{this.state.detail_data.time_accept != null ? moment(this.state.detail_data.time_accept).locale('fa').format("YYYY/M/D"): <span>تنظیم نشده</span>}</Descriptions.Item>
-            <Descriptions.Item label="زمان رسیدن به محل" span={1}>{this.state.detail_data.time_accept != null ? moment(this.state.detail_data.time_arrive).locale('fa').format("YYYY/M/D"): <span>تنظیم نشده</span>}</Descriptions.Item>
-            <Descriptions.Item label="زمان پایان" span={1}>{this.state.detail_data.time_accept != null ? moment(this.state.detail_data.time_end).locale('fa').format("YYYY/M/D") : <span>تنظیم نشده</span>}</Descriptions.Item>
-            <Descriptions.Item label="زمان ثبت خرابی" span={2}>{moment(this.state.detail_data.created_at).locale('fa').format("YYYY/M/D")}</Descriptions.Item>
+            <Descriptions.Item label="زمان پذیرش" span={1}>{this.state.detail_data.time_send != null ? moment(this.state.detail_data.time_send).locale('fa').format("YYYY/M/D hh:mm"): <span>تنظیم نشده</span>}</Descriptions.Item>
+            <Descriptions.Item label="زمان رسیدن به محل" span={1}>{this.state.detail_data.time_arrive != null ? moment(this.state.detail_data.time_arrive).locale('fa').format("YYYY/M/D hh:mm"): <span>تنظیم نشده</span>}</Descriptions.Item>
+            <Descriptions.Item label="زمان پایان" span={1}>{this.state.detail_data.time_end != null ? moment(this.state.detail_data.time_end).locale('fa').format("YYYY/M/D hh:mm") : <span>تنظیم نشده</span>}</Descriptions.Item>
+            <Descriptions.Item label="زمان ثبت خرابی" span={2}>{moment(this.state.detail_data.created_at).locale('fa').format("YYYY/M/D hh:mm")}</Descriptions.Item>
             <Descriptions.Item label="وضعیت ساختمان" span={1}>{this.state.detail_user.is_active == true ? <span>فعال </span> : <span> غیرفعال</span>}</Descriptions.Item>
             <Descriptions.Item label="توضیحات خرابی" span={2}>{this.state.detail_data.description}</Descriptions.Item>
             <Descriptions.Item label="آدرس" span={3}>{this.state.detail_user.address}</Descriptions.Item>
